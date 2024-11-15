@@ -8,7 +8,7 @@ namespace Lab
 {
     public static class StaffMemberFactory
     {
-        public static StaffMember GetMember(ICollection<string> properties) {
+        public static StaffMember GetMember(IDictionary<string, string> properties) {
             try
             {
                 StaffMember member = new StaffMember(properties);

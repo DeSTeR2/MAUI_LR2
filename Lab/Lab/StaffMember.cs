@@ -6,46 +6,37 @@ using System.Threading.Tasks;
 
 namespace Lab
 {
+
+    public enum Attribute
+    {
+        None,
+        Name,
+        Department,
+        DepartmentSection,
+        Position,
+        Salary,
+        Duration
+    }
     public class StaffMember
     {
-        string name;
-        string departament;
-        string departmentSection;
-        string position;
-        string salary;
-        string duration;
+        public Dictionary<Attribute, string> values { get; private set; } = new();
 
-        public string Name { get => name; }
-        public string Departament { get => departament; }
-        public string DepartmentSection { get => departmentSection; }
-        public string Position { get => position; }
-        public string Salary { get => salary; }
-        public string Duration { get => duration; }
-
-        public StaffMember(string name, string departament, string position, string salary, string duration)
+        public StaffMember(IDictionary<string, string> properties)
         {
-            this.name = name;
-            this.departament = departament;
-            this.position = position;
-            this.salary = salary;
-            this.duration = duration;
+            foreach (var property in properties) {
+                Attribute attribute = (Attribute)Enum.Parse(typeof(Attribute), property.Key);
+                FillAttribute(attribute, property.Value);
+            }
         }
 
-        public StaffMember(ICollection<string> properties)
-        {
-            List<string> list = properties.ToList();
-
-            if (list.Count < 5)
+        private void FillAttribute(Attribute attribute, string value) {
+            if (values.ContainsKey(attribute))
             {
-                throw new ArgumentException("There is less that 5 properties");
+                values[attribute] = value;
+            } else
+            {
+                values.Add(attribute, value);
             }
-
-            name = list[0];
-            departament = list[1];
-            departmentSection = list[2];
-            position = list[3];
-            salary = list[4];
-            duration = list[5];
         }
     }
 }

@@ -9,20 +9,23 @@ namespace Lab.ParseStrategy
 {
     public class DomParse : IParse
     {
-        public List<StaffMember> Parse(XmlDocument doc)
+        public List<StaffMember> Parse(string contnet)
         {
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(contnet);
+
             List<StaffMember> members = new List<StaffMember>();
             XmlNodeList elements = doc.GetElementsByTagName("StaffMember");
 
             foreach (XmlNode member in elements)
             {
-                List<string> attributeList = new();
+                Dictionary<string, string> values = new();
                 XmlNodeList attributes = member.ChildNodes;
                 for (int i = 0; i < attributes.Count; i++) {
-                    attributeList.Add(attributes[i].InnerText);
+                    values.Add(attributes[i].Name, attributes[i].InnerText);
                 }
 
-                StaffMember newMember = StaffMemberFactory.GetMember(attributeList);
+                StaffMember newMember = StaffMemberFactory.GetMember(values);
                 members.Add(newMember);
             }
 

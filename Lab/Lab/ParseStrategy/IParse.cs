@@ -4,6 +4,6 @@ namespace Lab.ParseStrategy
 {
     public interface IParse
     {
-        public List<StaffMember> Parse(XmlDocument doc);
+        public List<StaffMember> Parse(string conternt);
     }
 }
