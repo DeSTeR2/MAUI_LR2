@@ -25,6 +25,12 @@
                     HorizontalOptions="End" />
 
                 <Button
+                    Text="HTML"
+                    Clicked="OnHTMLButtonClicked"
+                    HorizontalOptions="End"
+                    />
+
+                <Button
                     Text="Вихід"
                     Clicked="OnExitClicked"
                     HorizontalOptions="End" />

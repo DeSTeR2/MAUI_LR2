@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using CommunityToolkit.Maui.Storage;
+﻿using CommunityToolkit.Maui.Storage;
 using Lab.ParseStrategy;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Controls.Compatibility;
 
 namespace Lab
 {
@@ -52,7 +48,7 @@ namespace Lab
             AttributePicker.ItemsSource = translatedNames;
         }
 
-        private async void OnAttributeSelected(object sender, EventArgs e)
+        private void OnAttributeSelected(object sender, EventArgs e)
         {
             if (AttributePicker.SelectedIndex == -1)
             {
@@ -84,7 +80,7 @@ namespace Lab
         {
             AttributePicker.SelectedItem = null;
             AttributeInput.Text = "";
-            ShowMembers();
+            DeleteGrid();
         }
 
         private async void OnExitClicked(object sender, EventArgs e)
@@ -126,6 +122,20 @@ namespace Lab
             parser.SelectSearhBy(content);
         }
 
+        private async void OnHTMLButtonClicked(object sender, EventArgs e)
+        {
+            List<StaffMember> members = parser.GetMebmersByAttribute();
+            string path = await HtmlConvertor.Convert(members);
+
+            string answer = $"Успіх! Команда для відкриття скопійована в Clipboard";
+            if (string.IsNullOrEmpty(path))
+            {
+                answer = "Не отрималось конвертувати";
+            }
+
+            await DisplayAlert("Html конвертація", answer, "OK");
+        }
+
         private void ShowMembers()
         {
             parser.Parse();
@@ -156,25 +166,27 @@ namespace Lab
             }
 
             int attributeNumber = parser.GetAttributes().Length;
-            var childrenToRemove = ParsedTableGrid.Children.Skip(attributeNumber).ToList();
+            var childrenToRemove = ParsedTableGrid.Children.Skip(attributeNumber - 1).ToList();
 
             foreach (var child in childrenToRemove)
             {
                 ParsedTableGrid.Children.Remove(child);
             }
-
             List<StaffMember> members = parser.GetMebmersByAttribute();
             ParsedTableGrid.AddRowDefinition(new RowDefinition());
             for (int i = 0; i < members.Count; i++)
             {
                 var member = members[i];
                 ParsedTableGrid.AddRowDefinition(new RowDefinition());
+                Dictionary<Attribute, string> memberDictionary = member.GetDictionary();
                 for (int j = 1; j < attributeNumber; j++)
                 {
                     Attribute attribute = (Attribute)j;
+                    string? labelText = "";
+                    memberDictionary.TryGetValue(attribute, out labelText);
                     Label entry = new Label
                     {
-                        Text = member.values[attribute],
+                        Text = labelText,
                     };
 
                     ParsedTableGrid.SetColumn(entry, j-1);
@@ -182,12 +194,15 @@ namespace Lab
                     ParsedTableGrid.Children.Add(entry);
                 }
             }
-
         }
 
-        private void AttributeInput_Unfocused(object sender, FocusEventArgs e)
+        private void DeleteGrid()
         {
-
+            var childrens = ParsedTableGrid.Children;
+            foreach (var child in childrens)
+            {
+                ParsedTableGrid.Children.Remove(child);
+            }
         }
     }
 }

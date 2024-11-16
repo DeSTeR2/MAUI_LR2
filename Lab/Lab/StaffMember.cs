@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lab
+﻿namespace Lab
 {
-
     public enum Attribute
     {
         None,
@@ -19,24 +12,55 @@ namespace Lab
     }
     public class StaffMember
     {
-        public Dictionary<Attribute, string> values { get; private set; } = new();
+        private Dictionary<Attribute, string> values = new();
+
+        public string? Name;
+        public string? Department;
+        public string? DepartmentSection;
+        public string? Position;
+        public string? Salary;
+        public string? Duration;
+
+        // Parameterless constructor
+        public StaffMember()
+        {
+        }
 
         public StaffMember(IDictionary<string, string> properties)
         {
-            foreach (var property in properties) {
+            foreach (var property in properties)
+            {
                 Attribute attribute = (Attribute)Enum.Parse(typeof(Attribute), property.Key);
                 FillAttribute(attribute, property.Value);
             }
+
+            FillInfo();
         }
 
-        private void FillAttribute(Attribute attribute, string value) {
+
+        public void FillInfo()
+        {
+            values.TryGetValue(Attribute.Name, out Name);
+            values.TryGetValue(Attribute.Department, out Department);
+            values.TryGetValue(Attribute.DepartmentSection, out DepartmentSection);
+            values.TryGetValue(Attribute.Position, out Position);
+            values.TryGetValue(Attribute.Salary, out Salary);
+            values.TryGetValue(Attribute.Duration, out Duration);
+        }
+
+        public Dictionary<Attribute, string> GetDictionary() => values;
+
+        private void FillAttribute(Attribute attribute, string value)
+        {
             if (values.ContainsKey(attribute))
             {
                 values[attribute] = value;
-            } else
+            }
+            else
             {
                 values.Add(attribute, value);
             }
         }
     }
+
 }

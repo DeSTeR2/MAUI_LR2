@@ -1,99 +1,99 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Html/tableTemplate.xslt" type="text/xsl" ?>
+
 <ScientificStaffSalaries>
 	<StaffMember>
-		<Name id="0">Іванов Іван Іванович</Name>
 		<Department id="1">Факультет комп'ютерних наук</Department>
-		<DepartmentSection id="2">Кафедра програмування</DepartmentSection>
 		<Position id="3">Доцент</Position>
 		<Salary id="4">15000</Salary>
 		<Duration id="5">5 років</Duration>
+		<DepartmentSection id="2">Кафедра програмування</DepartmentSection>
+		<Name id="0">Іванов Іван Іванович</Name>
 	</StaffMember>
 	<StaffMember>
-		<Name id="0">Петренко Олена Василівна</Name>
-		<Department id="1">Факультет біології</Department>
-		<DepartmentSection id="2">Кафедра ботаніки</DepartmentSection>
-		<Position id="3">Старший викладач</Position>
 		<Salary id="4">13500</Salary>
-		<Duration id="5">7 років</Duration>
+		<Department id="1">Факультет біології</Department>
+		<Name id="0">Петренко Олена Василівна</Name>
+		<Position id="3">Старший викладач</Position>
+		<DepartmentSection id="2">Кафедра ботаніки</DepartmentSection>
 	</StaffMember>
 	<StaffMember>
-		<Name id="0">Сидоренко Максим Петрович</Name>
-		<Department id="1">Факультет фізики</Department>
-		<DepartmentSection id="2">Кафедра теоретичної фізики</DepartmentSection>
-		<Position id="3">Професор</Position>
 		<Salary id="4">20000</Salary>
+		<Name id="0">Сидоренко Максим Петрович</Name>
+		<Position id="3">Професор</Position>
 		<Duration id="5">10 років</Duration>
+		<Department id="1">Факультет фізики</Department>
 	</StaffMember>
 	<StaffMember>
+		<Duration id="5">3 роки</Duration>
 		<Name id="0">Коваль Марія Іванівна</Name>
-		<Department id="1">Факультет хімії</Department>
-		<DepartmentSection id="2">Кафедра органічної хімії</DepartmentSection>
 		<Position id="3">Асистент</Position>
 		<Salary id="4">12000</Salary>
-		<Duration id="5">3 роки</Duration>
+		<Department id="1">Факультет хімії</Department>
+		<DepartmentSection id="2">Кафедра органічної хімії</DepartmentSection>
 	</StaffMember>
 	<StaffMember>
+		<Position id="3">Доцент</Position>
 		<Name id="0">Тарасенко Володимир Ілліч</Name>
+		<Duration id="5">6 років</Duration>
+		<Salary id="4">15500</Salary>
 		<Department id="1">Факультет математики</Department>
 		<DepartmentSection id="2">Кафедра алгебри та геометрії</DepartmentSection>
-		<Position id="3">Доцент</Position>
-		<Salary id="4">15500</Salary>
-		<Duration id="5">6 років</Duration>
 	</StaffMember>
 	<StaffMember>
-		<Name id="0">Захаренко Катерина Сергіївна</Name>
 		<Department id="1">Факультет економіки</Department>
-		<DepartmentSection id="2">Кафедра макроекономіки</DepartmentSection>
-		<Position id="3">Старший викладач</Position>
 		<Salary id="4">14000</Salary>
+		<Name id="0">Захаренко Катерина Сергіївна</Name>
 		<Duration id="5">8 років</Duration>
+		<Position id="3">Старший викладач</Position>
+		<DepartmentSection id="2">Кафедра макроекономіки</DepartmentSection>
 	</StaffMember>
 	<StaffMember>
-		<Name id="0">Мельник Сергій Олександрович</Name>
-		<Department id="1">Факультет географії</Department>
-		<DepartmentSection id="2">Кафедра фізичної географії</DepartmentSection>
 		<Position id="3">Професор</Position>
 		<Salary id="4">19500</Salary>
 		<Duration id="5">9 років</Duration>
+		<DepartmentSection id="2">Кафедра фізичної географії</DepartmentSection>
+		<Name id="0">Мельник Сергій Олександрович</Name>
+		<Department id="1">Факультет географії</Department>
 	</StaffMember>
 	<StaffMember>
-		<Name id="0">Демченко Оксана Андріївна</Name>
-		<Department id="1">Факультет історії</Department>
-		<DepartmentSection id="2">Кафедра всесвітньої історії</DepartmentSection>
 		<Position id="3">Асистент</Position>
-		<Salary id="4">12500</Salary>
+		<Name id="0">Демченко Оксана Андріївна</Name>
 		<Duration id="5">2 роки</Duration>
+		<DepartmentSection id="2">Кафедра всесвітньої історії</DepartmentSection>
+		<Salary id="4">12500</Salary>
+		<Department id="1">Факультет історії</Department>
 	</StaffMember>
 	<StaffMember>
-		<Name id="0">Бондаренко Юрій Дмитрович</Name>
-		<Department id="1">Факультет інформаційних технологій</Department>
-		<DepartmentSection id="2">Кафедра мережевих технологій</DepartmentSection>
-		<Position id="3">Старший викладач</Position>
 		<Salary id="4">14500</Salary>
+		<Name id="0">Бондаренко Юрій Дмитрович</Name>
+		<Position id="3">Старший викладач</Position>
+		<DepartmentSection id="2">Кафедра мережевих технологій</DepartmentSection>
+		<Department id="1">Факультет інформаційних технологій</Department>
 		<Duration id="5">4 роки</Duration>
 	</StaffMember>
 	<StaffMember>
-		<Name id="0">Лисенко Надія Миколаївна</Name>
-		<Department id="1">Факультет іноземних мов</Department>
-		<DepartmentSection id="2">Кафедра англійської філології</DepartmentSection>
-		<Position id="3">Доцент</Position>
-		<Salary id="4">16000</Salary>
 		<Duration id="5">6 років</Duration>
+		<Name id="0">Лисенко Надія Миколаївна</Name>
+		<Position id="3">Доцент</Position>
+		<DepartmentSection id="2">Кафедра англійської філології</DepartmentSection>
+		<Salary id="4">16000</Salary>
+		<Department id="1">Факультет іноземних мов</Department>
 	</StaffMember>
 	<StaffMember>
-		<Name id="0">Гончаренко Дмитро Павлович</Name>
-		<Department id="1">Факультет соціології</Department>
-		<DepartmentSection id="2">Кафедра прикладної соціології</DepartmentSection>
 		<Position id="3">Професор</Position>
-		<Salary id="4">21000</Salary>
+		<Name id="0">Гончаренко Дмитро Павлович</Name>
 		<Duration id="5">11 років</Duration>
+		<DepartmentSection id="2">Кафедра прикладної соціології</DepartmentSection>
+		<Salary id="4">21000</Salary>
+		<Department id="1">Факультет соціології</Department>
 	</StaffMember>
 	<StaffMember>
-		<Name id="0">Шевченко Тетяна Борисівна</Name>
-		<Department id="1">Факультет журналістики</Department>
 		<DepartmentSection id="2">Кафедра масових комунікацій</DepartmentSection>
-		<Position id="3">Асистент</Position>
 		<Salary id="4">13000</Salary>
+		<Position id="3">Асистент</Position>
+		<Name id="0">Шевченко Тетяна Борисівна</Name>
 		<Duration id="5">3 роки</Duration>
+		<Department id="1">Факультет журналістики</Department>
 	</StaffMember>
 </ScientificStaffSalaries>

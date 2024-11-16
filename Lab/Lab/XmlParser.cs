@@ -4,14 +4,14 @@ namespace Lab
 {
     public class XmlParser
     {
-        List<StaffMember> members;
-        string[] attributes;
+        List<StaffMember>? members;
+        string[]? attributes;
 
         Attribute selectedAttibute;
-        string searchBy;
-        IParse parser;
+        string? searchBy;
+        IParse? parser;
 
-        string content;
+        string? content;
         
         public void Parse(IParse parser, string input)
         {
@@ -20,10 +20,7 @@ namespace Lab
             members = parser.Parse(input);
         }
 
-        public void Parse()
-        {
-            Parse(parser, content);
-        }
+        public void Parse() => Parse(parser, content);
 
         public string[] GetAttributes()
         {
@@ -49,7 +46,7 @@ namespace Lab
 
             List<StaffMember> selected = new();
             foreach (StaffMember member in members) {
-                if (member.values[selectedAttibute] == searchBy)
+                if (member.GetDictionary()[selectedAttibute] == searchBy)
                 {
                     selected.Add(member);
                 }

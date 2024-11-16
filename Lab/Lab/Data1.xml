@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ScientificStaffSalaries>
+	<StaffMember>
+		<Name id="0">Кравченко Андрій Миколайович</Name>
+		<Department id="1">Факультет фізико-математичних наук</Department>
+		<DepartmentSection id="2">Кафедра теоретичної фізики</DepartmentSection>
+		<Position id="3">Професор</Position>
+		<Salary id="4">22000</Salary>
+		<Duration id="5">12 років</Duration>
+	</StaffMember>
+	<StaffMember>
+		<Department id="1">Факультет філософії</Department>
+		<Position id="3">Доцент</Position>
+		<Salary id="4">16500</Salary>
+		<Duration id="5">7 років</Duration>
+		<Name id="0">Мартинюк Вікторія Петрівна</Name>
+		<DepartmentSection id="2">Кафедра історії філософії</DepartmentSection>
+	</StaffMember>
+	<StaffMember>
+		<Duration id="5">5 років</Duration>
+		<Name id="0">Романенко Сергій Анатолійович</Name>
+		<Position id="3">Асистент</Position>
+		<Salary id="4">14000</Salary>
+		<Department id="1">Факультет медицини</Department>
+		<DepartmentSection id="2">Кафедра анатомії</DepartmentSection>
+	</StaffMember>
+	<StaffMember>
+		<Salary id="4">17500</Salary>
+		<Name id="0">Шевчук Олена Григорівна</Name>
+		<DepartmentSection id="2">Кафедра літературознавства</DepartmentSection>
+		<Position id="3">Старший викладач</Position>
+		<Duration id="5">9 років</Duration>
+		<Department id="1">Факультет гуманітарних наук</Department>
+	</StaffMember>
+	<StaffMember>
+		<Department id="1">Факультет архітектури</Department>
+		<Name id="0">Грищенко Микола Павлович</Name>
+		<DepartmentSection id="2">Кафедра дизайну</DepartmentSection>
+		<Position id="3">Доцент</Position>
+		<Salary id="4">18000</Salary>
+		<Duration id="5">8 років</Duration>
+	</StaffMember>
+	<StaffMember>
+		<Name id="0">Кузьменко Інна Василівна</Name>
+		<Position id="3">Асистент</Position>
+		<Department id="1">Факультет хімічних технологій</Department>
+		<Duration id="5">3 роки</Duration>
+		<DepartmentSection id="2">Кафедра матеріалознавства</DepartmentSection>
+		<Salary id="4">13500</Salary>
+	</StaffMember>
+	<StaffMember>
+		<Position id="3">Професор</Position>
+		<Name id="0">Бойко Ігор Іванович</Name>
+		<Department id="1">Факультет історичних наук</Department>
+		<Duration id="5">15 років</Duration>
+		<Salary id="4">25000</Salary>
+		<DepartmentSection id="2">Кафедра археології</DepartmentSection>
+	</StaffMember>
+	<StaffMember>
+		<Salary id="4">15000</Salary>
+		<Position id="3">Старший викладач</Position>
+		<Duration id="5">6 років</Duration>
+		<Name id="0">Павленко Віра Семенівна</Name>
+		<DepartmentSection id="2">Кафедра соціальних комунікацій</DepartmentSection>
+		<Department id="1">Факультет соціальних наук</Department>
+	</StaffMember>
+	<StaffMember>
+		<Name id="0">Довженко Оксана Андріївна</Name>
+		<Salary id="4">19000</Salary>
+		<Department id="1">Факультет кібернетики</Department>
+		<Duration id="5">10 років</Duration>
+		<Position id="3">Професор</Position>
+		<DepartmentSection id="2">Кафедра штучного інтелекту</DepartmentSection>
+	</StaffMember>
+	<StaffMember>
+		<DepartmentSection id="2">Кафедра інженерної механіки</DepartmentSection>
+		<Salary id="4">17000</Salary>
+		<Position id="3">Доцент</Position>
+		<Name id="0">Савченко Дмитро Сергійович</Name>
+		<Department id="1">Факультет механіки</Department>
+		<Duration id="5">8 років</Duration>
+	</StaffMember>
+</ScientificStaffSalaries>
